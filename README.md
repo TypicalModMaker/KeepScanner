@@ -1,7 +1,6 @@
 # KeepScanner
 Scans desired ips 24/7 for open minecraft servers\
-Dont shittalk the code, made it under 1 hour\
-
+Dont shittalk my code, I made it under 1 hour
 
 Usage: java -jar KeepScanner.jar botToken statusMessageID hitChannelID guildID
 
