@@ -30,7 +30,7 @@ public class KeepScannerImpl {
                 "  ███   ▀█▀   ██████████   ██████████  ▄████▀       ▄████████▀  ████████▀    ███    █▀   ▀█   █▀   ▀█   █▀    ██████████   ███    ███ \n" +
                 "  ▀                                                                                                                        ███    ███ ");
         if(args.length < 4) {
-            System.out.println("Invalid arguments! Start with java -jar KeepScanner.jar botToken statusMessageID hitChannelID guildID");
+            System.out.println("Invalid arguments! Start with java -jar KeepScanner.jar botToken statusMessageID statusChannelID hitChannelID guildID");
         }
         System.out.println("Starting...");
 
@@ -51,7 +51,7 @@ public class KeepScannerImpl {
         }
 
         System.out.println("Initializing Discord Bot...");
-        bot = new DiscordBot(args[0], args[1], args[2], args[3]);
+        bot = new DiscordBot(args[0], args[1], args[2], args[3], args[4]);
 
         System.out.println("Initializing Scanner...");
 
