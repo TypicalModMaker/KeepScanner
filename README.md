@@ -2,7 +2,7 @@
 Scans desired ips 24/7 for open minecraft servers\
 Dont shittalk my code, I made it under 1 hour
 
-Usage: java -jar KeepScanner.jar botToken statusMessageID hitChannelID guildID
+Usage: java -jar KeepScanner.jar botToken statusMessageID statusChannelID hitChannelID guildID
 
 Commands:\
 !addserver [IP] [NAME]\

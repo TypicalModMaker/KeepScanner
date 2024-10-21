@@ -30,11 +30,12 @@ import java.util.stream.Collectors;
 public class DiscordBot implements EventListener {
 
     public final JDA bot;
-    public final String statusMessageID, hitChannelID, guildID;
+    public final String statusMessageID, statusChannelID, hitChannelID, guildID;
     public Guild mainServer;
 
-    public DiscordBot(String token, String statusMessageID, String hitChannelID, String guildID) {
+    public DiscordBot(String token, String statusMessageID, String statusChannelID, String hitChannelID, String guildID) {
         this.statusMessageID = statusMessageID;
+        this.statusChannelID = statusChannelID;
         this.hitChannelID = hitChannelID;
         this.guildID = guildID;
         JDABuilder builder = JDABuilder.createDefault(token);
@@ -306,7 +307,7 @@ public class DiscordBot implements EventListener {
     }
 
     public void editStatus() {
-        TextChannel channel = mainServer.getChannelById(TextChannel.class, "1097940384564391977");
+        TextChannel channel = mainServer.getChannelById(TextChannel.class, this.statusChannelID);
         try {
             Message message = channel.retrieveMessageById(statusMessageID).complete();
             message.editMessage("ONLINE, Last Edit: " + TimeFormat.RELATIVE.now()).complete();
