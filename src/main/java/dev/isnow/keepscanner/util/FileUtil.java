@@ -10,7 +10,7 @@ import java.io.IOException;
 @UtilityClass
 public class FileUtil {
 
-    public static YamlConfiguration createDB() throws IOException, InvalidConfigurationException {
+    public YamlConfiguration createDB() throws IOException, InvalidConfigurationException {
         File serverFile = new File("servers.yml");
 
         if(!serverFile.exists()) {
