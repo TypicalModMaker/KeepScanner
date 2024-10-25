@@ -64,7 +64,8 @@ public class DiscordBot implements EventListener {
             t.start();
         } else if(genericEvent instanceof MessageReceivedEvent) {
             MessageReceivedEvent event = (MessageReceivedEvent) genericEvent;
-            // TODO: Improve this shitty code LOL
+            // TODO: Improve this shitty code LOLxd
+            // Will never happen
             if(event.getMessage().getContentRaw().startsWith("!removeserver")) {
                 String[] split = event.getMessage().getContentRaw().split(" ");
                 String name = split[1];
